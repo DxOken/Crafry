@@ -101,7 +101,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
 })
 
-module.exports = new Promise((res) => {
+module.exports = new Promise((res, rej) => {
     res(devWebpackConfig)
 })
 

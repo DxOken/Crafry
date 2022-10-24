@@ -41,7 +41,7 @@ close.addEventListener('click', () => {
 })
 
 menu.childNodes.forEach((menuItem) => {
-    menuItem.addEventListener('click', () => {
+    menuItem.addEventListener('click', (e) => {
         menu.childNodes.forEach((item) => {
             item.classList.remove('selected')
         })

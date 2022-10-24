@@ -189,6 +189,10 @@
 			width: perc(400, 1440);
 			border-right: 1px solid #fff;
 
+
+
+
+
 			@include _1170 {
 				width: 100%;
 				border-right: none;
@@ -274,6 +278,7 @@
 
 			font-family: Gilroy, sans-serif;
 			font-weight: 700;
+			//font-size: 165px;
 			font-size: res(30, 320, 165, 1920);
 			line-height: 215px;
 
@@ -286,6 +291,7 @@
 			a {
 				color: #fff;
 				text-decoration: none;
+				//margin-left: -100px;
 				margin-left: res(0, 320, -100, 1920);
 			}
 		}
