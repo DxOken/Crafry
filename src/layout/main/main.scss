@@ -1,0 +1,16 @@
+
+//Utils
+@import "~Utils/scss";
+
+//Components
+@import "~Components/sections/header/header.scss";
+@import "~Components/sections/footer/footer.scss";
+
+html {
+	user-select: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+}

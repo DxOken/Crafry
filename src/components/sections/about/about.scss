@@ -1,0 +1,136 @@
+.about {
+
+	padding-bottom: 80px;
+	background: url("../../../assets/img/man.jpg") 0 0 no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	overflow: hidden;
+	width: 100%;
+
+	position: relative;
+
+	@include _1170 {
+		padding-top: 0;
+		background: #01001F;
+
+		.about__dec-blur-1 {
+			display: none;
+		}
+
+		.about__dec-blur-2 {
+			display: none;
+		}
+
+	};
+
+	&__bg {
+		height: res(400, 320, 700, 1170);
+		margin-bottom: res(60, 320, 100, 1170);
+		width: 100%;
+		background: url("../../../assets/img/man.jpg") res(-200, 320, 0, 1170) 0 no-repeat;
+		background-size: cover;
+	}
+
+	&__content {
+		background: url('../../../assets/img/svg/lines.svg') no-repeat;
+		width: 1040px;
+		height: auto;
+		background-size: cover;
+		position: relative;
+		color: #fff;
+		//padding-left: 60px;
+		padding-left: res(25, 320, 60, 1920);
+		margin-left: res(20, 320, 145, 1920);
+		z-index: 3;
+
+		font-family: PlusJakartaSans, sans-serif;
+
+		&-line {
+			position: absolute;
+			left: 0;
+			background: #7F5CFF;
+			width: 6px;
+			height: 100%;
+			box-shadow: 0 0 17px rgba(191, 58, 255,1);
+			border-radius: 40px;
+			z-index: 1;
+		}
+
+		&-desc {
+			padding-top: 60px;
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+			line-height: 28px;
+			text-transform: uppercase;
+
+			margin-bottom: 22px;
+		}
+
+		&-title {
+
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(28, 320, 45, 1920);
+			line-height: 49px;
+			text-transform: uppercase;
+
+			margin-bottom: 27px;
+
+		}
+
+		&-text {
+			//width: 615px;
+			width: res(280, 320, 615, 1920);
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+			line-height: 32px;
+			opacity: .8;
+
+			//margin-bottom: 63px;
+			margin-bottom: res(10, 320, 63, 1920);
+		}
+
+		&-progress {
+			width: 407px;
+
+			&-img {
+				margin-bottom: 8px;
+			}
+
+			&-info {
+				display: flex;
+				justify-content: space-between;
+
+				font-family: HeliosExtC, sans-serif;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 26px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__dec-blur-1 {
+		position: absolute;
+		background: rgb(116, 118, 237);
+		width: 789.74px;
+		height: 562.05px;
+		opacity: 36%;
+		filter: blur(218px);
+		transform: matrix(0.87, 0.5, 0.5, -0.87, 0, 0);
+		top: 200px;
+		left: -336px;
+		z-index: 1;
+	}
+	&__dec-blur-2 {
+		position: absolute;
+		width: 859.18px;
+		height: 372.67px;
+		background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+		opacity: .5;
+		filter: blur(218px);
+		transform: matrix(0.88, -0.48, -0.48, -0.88, 0, 0);
+		top: 335px;
+		right: -397px;
+	}
+}

@@ -1,0 +1,278 @@
+.resources {
+	height: auto;
+
+	padding-bottom: res(110, 320, 380, 1920);
+
+	background: #090812;
+	overflow: hidden;
+
+	&__content {
+		color: #fff;
+
+		&-desc {
+			padding-top: res(80, 320, 140, 1920);
+			text-align: center;
+			font-family: PlusJakartaSans, sans-serif;
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+            
+			line-height: 28px;
+			text-transform: uppercase;
+		}
+
+		&-title {
+			margin-top: 22px;
+			text-align: center;
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(28, 320, 45, 1920);
+			line-height: 63px;
+			text-transform: uppercase;
+		}
+
+		&-main {
+			margin-top: res(50, 320, 140, 1920);
+			margin-left: 100px;
+			position: relative;
+
+			height: 534px;
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+
+			@include _1170 {
+				margin-left: 0;
+				height: auto;
+				width: 100%;
+				flex-direction: column-reverse;
+			};
+
+
+			.info {
+				margin-left: 30px;
+				position: relative;
+				margin-right: 70px;
+
+				background: linear-gradient(270deg, rgba(58, 78, 255, 0), rgba(216, 58, 255, 0.1));
+				backdrop-filter: blur(15px);
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				@include _1170 {
+					margin-left: res(10, 320, 30, 1170);
+					align-items: start;
+				};
+
+				&__lines {
+					position: absolute;
+					height: 100%;
+					top: 1px;
+					left: 0;
+					width: 760px;
+					background: url("../../../assets/img/svg/resources-lines.svg") no-repeat;
+					background-size: cover;
+				}
+
+
+				&__logo {
+					margin-top: res(45, 320, 75, 1920);
+					z-index: 11;
+
+					@include _1170 {
+						margin-left: 30px;
+					};
+				}
+
+				&__title {
+					margin-top: 40px;
+					font-family: HeliosExtC, sans-serif;
+					font-weight: 700;
+					font-size: res(24, 320, 35, 1920);
+					line-height: 38px;
+					text-transform: uppercase;
+					z-index: 11;
+
+					text-align: center;
+
+					width: 560px;
+					
+					@include _1170 {
+						width: 100%;
+						text-align: left;
+						margin-left: 30px;
+					};
+
+				}
+
+				&__text {
+					margin-top: 27px;
+
+					font-family: Gilroy, sans-serif;
+					font-weight: 400;
+					font-size: res(16, 320, 20, 1920);
+					line-height: 32px;
+					opacity: .7;
+					text-align: center;
+					z-index: 11;
+
+					width: 560px;
+					
+					@include _1170 {
+						width: res(270, 320, 650, 1170);
+						text-align: left;
+						margin-left: 30px;
+					};
+				}
+
+				&__btn {
+					width: 291px;
+					margin-top: 70px;
+					margin-bottom: 45px;
+					z-index: 11;
+
+					@include _1170 {
+
+						margin-left: res(15, 320, 30, 1170);
+					};
+				}
+
+				.line {
+					position: absolute;
+					width: 6px;
+					height: 100%;
+					left: 0;
+					top: 0;
+
+					z-index: 3;
+					background: #BF3AFF;
+					box-shadow: 0 0 17px rgba(191, 58, 255, 0.4);
+					border-radius: 50px;
+
+				}
+
+				.star {
+					position: absolute;
+					left: 95px;
+					bottom: -30px;
+				}
+			}
+
+
+
+			.img {
+				position: relative;
+				width: res(554 ,1440, 854, 1920);
+				height: res(554 ,1440, 854, 1920);
+				margin-right: 140px;
+
+
+				@include _1170 {
+					width: 100%;
+					height: res(400, 320, 654, 1170);
+				};
+
+				&__main {
+					position: absolute;
+					z-index: 3;
+					mix-blend-mode: color-dodge;
+					margin-top: 50px;
+					margin-left: 50px;
+					//width: 654px;
+					width: res(554 ,1440, 854, 1920);
+
+
+					@include _1170 {
+						margin-left: 0;
+						left: 55%;
+						transform: translate(-50%, 0);
+						width: res(340, 320, 654, 1170);
+					};
+				}
+
+				.circle {
+					@include _1170 {
+						display: none;
+					};
+
+					&__one {
+						position: absolute;
+						border-radius: 50%;
+						background: rgba(255, 255, 255, 0.01);
+						box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.15);
+						backdrop-filter: blur(50px);
+						top: 240px;
+						left: 40px;
+						height: 61px;
+						width: 61px;
+
+					}
+
+					&__two {
+						position: absolute;
+						border-radius: 50%;
+						background: rgba(255, 255, 255, 0.01);
+						box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.15);
+						backdrop-filter: blur(50px);
+						top: 100px;
+						left: 310px;
+						height: 95px;
+						width: 95px;
+					}
+
+					&__three {
+						position: absolute;
+						border-radius: 50%;
+						background: rgba(255, 255, 255, 0.01);
+						box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.15);
+						backdrop-filter: blur(50px);
+						left: 190px;
+						bottom: 53px;
+						height: 49px;
+						width: 49px;
+					}
+				}
+
+				.blur-2 {
+					position: absolute;
+					z-index: 2;
+					width: 367.01px;
+					height: 362.63px;
+
+					top: 100px;
+					left: 120px;
+					opacity: .3;
+
+					background: #C41BFF;
+					mix-blend-mode: hard-light;
+					filter: blur(100px);
+
+					@include _1170 {
+						top: res(10, 320, 100, 1170);
+						left: 50%;
+						transform: translate(-50%, 0);
+					};
+				}
+
+			}
+
+
+			.blur-1 {
+				position: absolute;
+				width: 1333.03px;
+				height: 588.11px;
+				opacity: .34;
+				top: -70px;
+				left: -90px;
+				border-radius: 50%;
+				background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+				filter: blur(218px);
+				//z-index: 1;
+			}
+
+
+		}
+	}
+}

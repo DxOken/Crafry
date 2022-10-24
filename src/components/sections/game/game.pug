@@ -1,0 +1,30 @@
+include /components/elements/button/button
+
+mixin section-game
+    .game
+        .game__banner-1
+            .game__banner-1-lines
+                p= 'VR GAME MARKETPLACE'
+        .game__banner-2
+            .game__banner-2-text
+                span= 'CRAFTY METAVERSE'
+                span= 'CRAFTY METAVERSE'
+                span= 'CRAFTY METAVERSE'
+                span= 'CRAFTY METAVERSE'
+        .game__bg
+        .game__content
+            .game__content-main
+                .game__content-main-line
+                .game__content-main-lines
+                .game__content-main-info
+                    .game__content-main-info-title= 'Game'
+                    .game__content-main-info-text
+                        span= 'The space will also offer avid gamers to be a part of an amazing 3D gaming experience (details to be published soon).'
+                        span= 'Crafty Metaverse space will continuously evolve its 3D gaming space to include technologies such as VR headsets, augmented reality glasses, and game consoles.'
+            .game__content-btn
+                +button('fill-border', 'Invest Now')
+        .game__characters
+            .game__characters-1
+                img(src='assets/img/character-1.png')
+            .game__characters-2
+                img(src='assets/img/character-2.png')

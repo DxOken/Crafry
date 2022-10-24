@@ -1,0 +1,34 @@
+//- Layout
+extends /layout/main/main
+
+include /components/sections/main/main
+include /components/sections/about/about
+include /components/sections/roadmap/roadmap
+include /components/sections/solutions/solutions
+include /components/sections/resources/resources
+include /components/sections/game/game
+include /components/sections/marketplace/marketplace
+include /components/sections/team/team
+include /components/sections/questions/questions
+
+block head
+    title= 'Crafry Metaverse'
+
+block content
+    +section-main
+
+    +section-about
+
+    +section-roadmap
+
+    +section-solutions
+
+    +section-resources
+
+    +section-game
+
+    +section-marketplace
+
+    +section-team
+
+    +section-questions

@@ -1,0 +1,239 @@
+.solutions {
+	background: #090812;
+	color: #fff;
+	overflow: hidden;
+
+	&__content {
+		background: linear-gradient(to left, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.3) 100%);
+		backdrop-filter: blur(150px);
+
+		padding-bottom: res(60, 320, 135, 1920);
+		height: 100%;
+
+		&-bg {
+			background: url("../../../assets/img/svg/bg-solutions.svg") no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		&-desc {
+			display: inline-block;
+			width: 100%;
+			margin-top: res(70, 320, 112, 1920);
+			text-align: center;
+
+			font-family: PlusJakartaSans, sans-serif;
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+			line-height: 28px;
+			text-transform: uppercase;
+		}
+
+		&-title {
+			margin-top: 24px;
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(28, 320, 45, 1920);
+			line-height: 49px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&-cards {
+			display: flex;
+			justify-content: space-between;
+			margin: res(70, 320, 90, 1920) 100px 0;
+
+			@include _1170 {
+				flex-direction: column;
+				align-items: center;
+			};
+
+			.card {
+
+				width: res(280, 320, 390, 1920);
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				@include _1170 {
+					margin-bottom: 40px;
+				};
+
+				&__img {
+					width: 100%;
+					position: relative;
+
+					img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 2;
+					}
+				}
+
+				&__desc {
+					position: relative;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					z-index: 3;
+
+					&-line {
+						height: 6px;
+						width: 100%;
+						border-radius: 50px;
+						box-shadow: 0 0 4px rgba(56, 219, 255, 0.5);
+					}
+
+					&-light {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 202px;
+						width: 100%;
+						background: linear-gradient(180deg, rgba(56, 219, 255, 0.14) 0.58%, rgba(56, 219, 255, 0) 42.57%);
+					}
+
+					&-title {
+						margin-top: 46px;
+						text-align: center;
+						font-family: HeliosExtC, sans-serif;
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 22px;
+						text-transform: uppercase;
+
+						width: 270px;
+					}
+
+					&-text {
+						margin-top: 7px;
+
+						font-family: PlusJakartaSans, sans-serif;
+						font-weight: 300;
+						font-size: 18px;
+						line-height: 29px;
+						text-align: center;
+						letter-spacing: 0.01em;
+						opacity: .6;
+					}
+				}
+
+				&:nth-child(1) {
+					.card__img {
+						height: 405.5px;
+						margin-bottom: 62.5px;
+
+					}
+
+					.card__desc-line {
+						background: #06D6DF;
+					}
+				}
+
+				&:nth-child(2) {
+					.card__img {
+						height: 401px;
+						margin-bottom: 67px;
+
+
+					}
+
+					.card__desc-line {
+						background: #7B71EE;
+					}
+				}
+
+				&:nth-child(3) {
+					.card__img {
+						height: 412px;
+						margin-bottom: 56px;
+
+					}
+
+					.card__desc-line {
+						background: #F00AFE;
+					}
+
+					.card__desc-text {
+						margin-top: 29px;
+					}
+
+					@include _1170 {
+						margin-bottom: 0;
+					};
+				}
+			}
+		}
+	}
+
+	&__dec-blur-1 {
+		position: absolute;
+		background: url("../../../assets/img/svg/solutions-blur-1.svg") no-repeat;
+		width: 100%;
+		height: 100%;
+		top: 200px;
+		left: res(600, 1170, 1380, 1920);
+		filter: blur(85px);
+		z-index: 1;
+
+		@include _1170 {
+			left: res(-50, 320, 350, 1170);
+			top: res(2100, 320, 1950, 1170);
+		};
+	}
+
+	&__dec-blur-2 {
+		position: absolute;
+		background: url("../../../assets/img/svg/solutions-blur-2.svg") no-repeat;
+		width: 100%;
+		height: 100%;
+		top: 200px;
+		left: 80px;
+		filter: blur(85px);
+		z-index: 1;
+
+		@include _1170 {
+			left: res(0, 320, 300, 1170);
+			top: 200px;
+		};
+	}
+
+	&__dec-blur-3 {
+		position: absolute;
+		background: url("../../../assets/img/svg/solutions-blur-3.svg") no-repeat;
+		width: 100%;
+		height: 100%;
+		top: 200px;
+		left: res(450, 1170, 850, 1920);
+		filter: blur(85px);
+		z-index: 1;
+
+		@include _1170 {
+			left: res(0, 320, 450, 1170);
+			top: res(1100, 320, 1050, 1170);
+		};
+
+	}
+
+	&__dec-blur-4 {
+		position: absolute;
+		background: url("../../../assets/img/svg/solutions-blur-4.svg") no-repeat;
+		width: 100%;
+		height: 100%;
+		top: 200px;
+		left: res(350, 1170, 750, 1920);
+		filter: blur(85px);
+		z-index: 1;
+
+		@include _1170 {
+			left: res(0, 320, 350, 1170);
+			top: res(1100, 320, 1050, 1170);
+		};
+	}
+}

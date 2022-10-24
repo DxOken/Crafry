@@ -1,0 +1,261 @@
+.team {
+	background: #0A0117;
+	position: relative;
+	overflow-x: clip;
+
+	
+	&__content {
+		position: relative;
+		z-index: 10;
+		display: block;
+		background: url("../../../assets/img/svg/team-bg.svg") no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		padding-top: res(80, 320, 150, 1920);
+
+		color: #fff;
+
+		&-desc {
+			font-family: Gilroy, sans-serif;
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+			line-height: 28px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&-title {
+			margin-top: 15px;
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(28, 320, 45, 1920);
+			line-height: 49px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&-cards {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 180px;
+			padding-bottom: 200px;
+
+			@include _1170 {
+				flex-direction: column;
+				flex-wrap: wrap;
+				height: auto;
+				padding-bottom: res(50, 320, 200, 1170);
+			};
+
+			.card {
+				@include _1170 {
+					margin-bottom: 60px;
+				};
+
+				.desc {
+					font-family: PlusJakartaSans, sans-serif;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 22px;
+				}
+
+				.title {
+					font-family: HeliosExtC, sans-serif;
+					font-weight: 700;
+					font-size: 45px;
+					line-height: 63px;
+					text-transform: uppercase;
+				}
+			}
+
+			.card:nth-child(even) {
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: center;
+
+				@include _1170 {
+					flex-direction: column;
+				};
+
+				.title {
+					margin-bottom: 20px;
+				}
+			}
+
+			.card:nth-child(odd) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+
+				.desc {
+					margin-top: 30px;
+				}
+			}
+
+			.card:nth-child(1) {
+				margin-top: -150px;
+
+				.desc {
+					margin-top: 5px;
+				}
+
+				.title {
+					color: #56FFEB;
+				}
+
+				.social {
+					width: 240px;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+
+			.card:nth-child(2) {
+				.title {
+					color: #2C4DFF;
+				}
+			}
+
+			.card:nth-child(3) {
+				.title {
+					color: #BF3AFF;
+				}
+			}
+
+			.card:nth-child(4) {
+				.title {
+					color: #FB41FF;
+				}
+			}
+
+
+
+
+		}
+	}
+
+
+	&__banner-1 {
+		position: absolute;
+		left: -100px;
+		bottom: res(-120, 320, -50, 1920);
+		height: res(50, 320, 100, 1920);
+		width: 2000px;
+		background: #000;
+		z-index: 9;
+		transform: rotate(8deg);
+
+		&-text {
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(32, 320, 72, 1920);
+			line-height: 140%;
+			letter-spacing: 0.01em;
+			background: linear-gradient(90deg, #21FCFF 0%, #FD40FF 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			white-space: nowrap;
+			margin-left: -500px;
+
+			span {
+				padding-right: res(60, 320, 50, 1920);
+				//padding-left: 50px;
+				padding-left: res(10, 320, 50, 1920);
+
+				&:after {
+					content: '';
+					width: res(21, 320, 46, 1920);
+					height: res(21, 320, 46, 1920);
+					background: url("../../../assets/img/svg/star.svg");
+					background-size: cover;
+					position: absolute;
+					margin-left: 27px;
+					top: 50%;
+					transform: translate(0, -50%);
+
+				}
+			}
+
+		}
+
+	}
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		background: rgba(0, 0, 0, 0.2);
+		mix-blend-mode: color-dodge;
+		backdrop-filter: blur(50px);
+	}
+
+	&__blur-1 {
+		position: absolute;
+		width: 851.18px;
+		height: 704.5px;
+		background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+		opacity: 0.33;
+		border-radius: 50%;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		rotate: -30deg;
+		filter: blur(218px);
+
+		@include _1170 {
+			top: 1200px;
+			filter: blur(120px);
+
+		};
+	}
+
+	&__blur-2 {
+		position: absolute;
+		width: 789.74px;
+		height: 562.05px;
+		left: -600px;
+		top: 190px;
+		rotate: 30deg;
+		background: linear-gradient(0deg, #7476ED, #7476ED);
+		border-radius: 50%;
+		opacity: 0.36;
+		filter: blur(218px);
+		z-index: 3;
+
+		@include _1170 {
+			top: res(300, 320, 190, 1170);
+			left: -400px;
+			opacity: .5;
+			filter: blur(60px);
+			mix-blend-mode: color-dodge;
+		};
+	}
+
+	&__blur-3 {
+		position: absolute;
+		width: 560px;
+		height: 560px;
+		top: 290px;
+		left: 70px;
+		border-radius: 50%;
+		z-index: 4;
+
+		background: linear-gradient(0deg, #7476ED, #7476ED);
+		opacity: 0.5;
+		filter: blur(218px);
+
+		@include _1170 {
+			background: linear-gradient(0deg, #7476ED, #7476ED);
+			top: 2200px;
+			filter: blur(60px);
+			mix-blend-mode: color-dodge;
+			left: -200px;
+		};
+	}
+}

@@ -1,0 +1,117 @@
+
+mixin section-roadmap
+    -
+        const data = [
+            {
+                num: 'q1',
+                title: 'Governance Token Launch on BSC ($CMETA)',
+                list: [
+                    'Launch Date: Jan 8th, 2022 Contract Audit',
+                    'TechAudit Completed on Jan 21st, 2022 5k Telegram members',
+                    '32k Telegram Members.  CG and CMC listings',
+                    'Application Sent CEX Listings',
+                    'CoinsBit Listing – Feb 8th . Website Revamp',
+                    'Contracted UI/UX Developers',
+                ],
+                more: true,
+                circles: [1, 2, 3, 4],
+                blur: [1, 2, 3, 4, 5, 6]
+            },
+            {
+                num: 'q2',
+                title: 'CMETA Ecosystem Begins',
+                list: [
+                    'CMETA Staking Release',
+                    'SANKOFA Sidechain DEV Starts ($KOFA)',
+                        [
+                            'CEX Listings and Marketing',
+                            'Governance Token Launch on SOL ($CMETA)'
+                        ],
+                    'Bridge BSC, ETH Smart Contracts to Solana Contract',
+                        [
+                            'Social Media Marketing Push'
+                        ],
+                    '10K Telegram Members',
+                    '10K Twitter Followers',
+                ],
+                more: true,
+                circles: [1, 2, 3, 4],
+                blur: [1, 2, 3, 4, 5, 6]
+            },
+            {
+                num: 'q3',
+                title: 'Guardians of Lost Worlds Released to Public (PC)',
+                list: [
+                    'Implement In-Game Staking ($KOFA Rewards)',
+                    'In-Game NFT Released',
+                        [
+                            'SANKOFA Sidechain on Test Net'
+                        ],
+                        'Fiat On-Ramp Added',
+                        [
+                            'Gameplay Battle Mode Introduced',
+                            'Marketplace Introduced',
+                            'CEX Listings and Marketing'
+                        ],
+                ],
+                more: false,
+                circles: [1, 2, 3, 4],
+                blur: [1, 2, 3, 4, 5, 6]
+            },
+            {
+                num: 'q4',
+                title: 'SANKOFA Mainnet Launch',
+                list: [
+                    ' Migrate Guardians of Lost Worlds to SANKOFA Sidechain',
+                    [
+                        'CEX Listings & Marketing',
+                            'Virtual Arts Studio Introduced',
+                            'Mobile Beta Gameplay Revealed',
+                            'CMETA DEX Introduced: FORGE'
+                    ],
+                        'Multi-Network Implementation',
+                    [
+                        'VR Game Dev Begins'
+                    ]
+                ],
+                more: false,
+                circles: [1, 2, 3, 4],
+                blur: [1, 2, 3, 4, 5, 6]
+            }
+        ]
+
+
+    .roadmap#roadmap
+        .roadmap__content
+            .roadmap__content-desc= 'Our Way'
+            .roadmap__content-title= 'Roadmap'
+            .roadmap__content-map
+                for item, idx in data
+                    div(class='step step-' + Number(1 + idx))
+                        .info
+                            p.info__num= item.num
+                            p.info__title= item.title
+                            ul.info__list
+                                for listItem in item.list
+                                    if typeof listItem !== 'string'
+                                        for subItem in listItem
+                                            li.info__list-item-sub= subItem
+                                    else
+                                        li.info__list-item= listItem
+                            if item.more
+                                button.info__more= 'More'
+                        .dots
+                            .dot_1.dot
+                                for circle in item.circles
+                                    div(class='circle dot__circle-' + circle)
+                                for blur in item.blur
+                                    div(class='blur dot__blur-' + blur)
+                            .dot_2.dot
+                                for circle in item.circles
+                                    div(class='circle dot__circle-' + circle)
+                                for blur in item.blur
+                                    div(class='blur dot__blur-' + blur)
+            .roadmap__content-dots-path
+                img(src='assets/img/svg/dots-path.svg')
+        .roadmap__dec-blur-1
+        .roadmap__dec-blur-2

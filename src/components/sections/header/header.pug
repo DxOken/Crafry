@@ -1,0 +1,24 @@
+mixin section-header
+    .header
+        .header__content
+            .header__content-logo
+                img(src='assets/img/svg/logo.svg')
+            .header__content-btn-open(hidden=false)
+                img(src='assets/img/svg/menu-ico.svg')
+            .header__content-btn-close(hidden)
+                img(src='assets/img/svg/close.svg')
+            ul.header__content-menu
+                li.header__content-menu-item
+                    a(href='#home')= 'Home'
+                li.header__content-menu-item
+                    a(href='#about')= 'About Us'
+                li.header__content-menu-item
+                    a(href='#')= 'White paper'
+                li.header__content-menu-item
+                    a(href='#')= 'Tokenomics'
+                li.header__content-menu-item
+                    a(href='#roadmap')= 'Road Map'
+                li.header__content-menu-item
+                    a(href='#')= 'How to buy'
+                li.header__content-menu-item
+                    a(href='#')= 'Buy'

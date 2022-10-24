@@ -1,0 +1,9 @@
+mixin button(style, text)
+    .btn
+        case style
+            when 'fill'
+                button.btn__fill
+                    p.btn__fill-title.btn__title= text
+            when 'fill-border'
+                button.btn__fill-border
+                    p.btn__fill-border-title.btn__title= text

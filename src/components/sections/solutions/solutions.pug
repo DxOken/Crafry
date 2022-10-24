@@ -1,0 +1,39 @@
+mixin section-solutions
+    -
+        const data = [
+            {
+                img: 'assets/img/svg/solutions-card-1.svg',
+                title: 'Guardians of Lost Worlds (P2E Game)',
+                text: 'Crafty Metaverse will soon launch Guardians of Lost Worlds, the first cross-chain P2E gaming experience. Our game will be available on multiple blockchains and then eventually on our side chain (SANKOFA). This will give users a seamless gameplay experience with little to no gas fees that allow users to focus on the game rather than worrying about losing their returns.'
+            },
+            {
+                img: "assets/img/svg/solutions-card-2.svg",
+                title: 'Crafty Metaverse Ecosystem',
+                text: 'Crafty Metaverse presents a Virtual Arts Studio where you can enhance your creativity by creating digital arts inspired by your game. A virtual marketplace to allow the users to trade and stake our $CMETA token and their NFTs. Negotiate with the digital avatars of other users to sell your NFTs at the best prices and generate passive income while playing'
+            },
+            {
+                img: "assets/img/svg/solutions-card-3.svg",
+                title: 'SANKOFA',
+                text: 'SANKOFA($KOFA) is an Ethereum sidechain that will be created with Guardians of Lost Worlds community in mind. LYQUID, the team behind Guardians of Lost Worlds, will build a reliable, fast and cheap network that could cater to the demands of the game.'
+            }
+        ]
+
+    .solutions
+        .solutions__content
+            .solutions__content-bg
+                p.solutions__content-desc= 'No problem'
+                p.solutions__content-title= 'Our brands'
+                .solutions__content-cards
+                    for item in data
+                        .card
+                            .card__img
+                                img(src=item.img)
+                            .card__desc
+                                .card__desc-line
+                                .card__desc-light
+                                .card__desc-title= item.title
+                                .card__desc-text= item.text
+                .solutions__dec-blur-1
+                .solutions__dec-blur-2
+                .solutions__dec-blur-3
+                .solutions__dec-blur-4

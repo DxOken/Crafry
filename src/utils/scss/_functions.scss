@@ -1,0 +1,7 @@
+@function res($minSz, $minW, $maxSz, $maxW) {
+	@return calc(#{$minSz + px} + (#{$maxSz} - #{$minSz}) * ((100vw - #{$minW + px}) / (#{$maxW} - #{$minW})));
+}
+
+@function perc($sz, $width) {
+	@return calc(($sz / $width) * 100%)
+}

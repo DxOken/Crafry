@@ -1,0 +1,141 @@
+.questions {
+	background: #090812;
+	padding-top: 280px;
+	position: relative;
+	overflow-x: clip;
+	padding-bottom: 50px;
+
+	&__content {
+		margin: 0 auto;
+		width: res(300, 320, 1350, 1920);
+		//height: 967px;
+		position: relative;
+		background: linear-gradient(to left, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%);
+		backdrop-filter: blur(15px);
+
+		clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 4%);
+
+		color: #fff;
+		z-index: 6;
+
+		border: 2px solid #000;
+
+		&-lines {
+			background: url("../../../assets/img/svg/questions-lines.svg") no-repeat;
+			background-size: contain;
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+
+			@include _1170 {
+				background-size: cover;
+			};
+		}
+
+		&-desc {
+			padding-top: 50px;
+
+			font-family: PlusJakartaSans, sans-serif;
+			font-weight: 400;
+			font-size: res(16, 320, 20, 1920);
+			line-height: 28px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&-title {
+			margin-top: 15px;
+			font-family: HeliosExtC, sans-serif;
+			font-weight: 700;
+			font-size: res(28, 320, 45, 1920);
+			line-height: 49px;
+			text-align: center;
+			text-transform: uppercase;
+
+			margin-bottom: 45px;
+		}
+
+		&-list {
+			list-style-position: inside;
+
+			margin-right: res(10, 320, 60, 1920);
+			margin-left: res(10, 320, 100, 1920);
+
+			&-question {
+				margin-top: 40px;
+				padding-bottom: 30px;
+
+				padding-right: 30px;
+
+				font-family: HeliosExtC, sans-serif;
+				font-weight: 700;
+				font-size: res(16, 320, 30, 1920);
+				line-height: 42px;
+
+				border-bottom: 1px solid #fff;
+				position: relative;
+				z-index: 10;
+				cursor: pointer;
+
+				&:after {
+					content: '';
+					background: url("../../../assets/img/svg/plus.svg") no-repeat;
+					background-size: cover;
+					width: res(16, 320, 30, 1920);
+					height: res(16, 320, 30, 1920);
+					position: absolute;
+					right: 0;
+					top: 5px;
+
+				}
+			}
+
+			&-answer {
+				margin-top: 20px;
+				font-family: PlusJakartaSans, sans-serif;
+				font-weight: 400;
+				font-size: res(16, 320, 24, 1920);
+				line-height: 38px;
+				opacity: .7;
+			}
+		}
+	}
+
+	&__dec-img-1 {
+		position: absolute;
+		z-index: 5;
+		top: -600px;
+		left: -500px;
+	}
+
+	&__dec-blur-1 {
+		position: absolute;
+		width: 1088.88px;
+		height: 839.24px;
+		top: 250px;
+		left: -250px;
+
+		background: linear-gradient(90deg, rgba(0, 219, 222, 0.3) 0%, rgba(252, 0, 255, 0.3) 100%);
+		opacity: 0.5;
+		filter: blur(218px);
+		z-index: 1;
+		rotate: -30deg;
+		border-radius: 50%;
+	}
+
+	&__dec-blur-2 {
+		position: absolute;
+		width: 1088.88px;
+		height: 839.24px;
+		top: 600px;
+		right: -250px;
+
+		background: linear-gradient(90deg, rgba(0, 219, 222, 0.3) 0%, rgba(252, 0, 255, 0.3) 100%);
+		opacity: 0.5;
+		filter: blur(218px);
+		z-index: 1;
+		rotate: -30deg;
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,30 @@
+include /components/elements/button/button
+
+mixin section-marketplace
+    .marketplace
+        .marketplace__explore
+            .marketplace__explore-info
+                .line
+                .lines
+                .star
+                .marketplace__explore-info-main
+                    .marketplace__explore-info-main-title= 'Explore Now'
+                    .marketplace__explore-info-main-desc= 'Each human will control his/her own digital identity in the Crafty Metaverse space.'
+                    .marketplace__explore-info-main-btn
+                        +button('fill-border', 'Invest Now')
+                .marketplace__explore-info-text= 'A virtual marketplace to allow the users to trade and stake our $CMETA token and their NFTs. Negotiate with the digital avatars of other users to sell your NFTs at the best prices and generate passive income while playing.'
+            .marketplace__explore-img
+                img(src='assets/img/explore.png')
+        .marketplace__studio
+            .marketplace__studio-img
+                img(src='assets/img/studio.png')
+            .marketplace__studio-info
+                .line
+                .lines
+                .star
+                .marketplace__studio-info-main
+                    .marketplace__studio-info-main-title= 'Virtual Arts Studio'
+                    .marketplace__studio-info-main-btn
+                        +button('fill-border', 'Create')
+                .marketplace__studio-info-text= 'Virtual Arts Studio where you can enhance your creativity by creating digital arts inspired by your game'
+        .marketplace__blur-1
